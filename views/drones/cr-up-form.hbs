@@ -1,0 +1,40 @@
+{{#if drone}}
+<h2>Update the drone</h2>
+<div class="container">
+
+<form action="/drones/{{drone._id}}/edit" method="POST">
+    <label for="name">Name: </label>
+        <input type="text" placeholder="Name:" name="name" id="name" autocomplete="off" value="{{drone.name}}">
+    
+    <label for="propellers">Propellers: </label>
+        <input type="number" placeholder="Amount of propellers:" name="propellers" id="propellers" value="{{drone.propellers}}">
+   
+    <label for="maxSpeed">Max speed: </label>
+        <input type="number" placeholder="Maximum speed:" name="maxSpeed" id="maxSpeed" value="{{drone.maxSpeed}}">
+    
+
+    <button>Update !</button>
+</form>
+</div>
+
+{{else}}
+<h2>Create a new drone</h2>
+<div class="container">
+
+<form action="/drones/create" method="POST">
+    <label for="name">Name: </label>
+        <input type="text" placeholder="Name:" name="name" id="name" autocomplete="off">
+    
+    <label for="propellers">Propellers: </label>
+        <input type="number" placeholder="Amount of propellers:" name="propellers" id="propellers">
+   
+    <label for="maxSpeed">Max speed: </label>
+        <input type="number" placeholder="Maximum speed:" name="maxSpeed" id="maxSpeed">
+    
+
+    <button>Submit!</button>
+
+</form>
+
+{{/if}}
+</div>

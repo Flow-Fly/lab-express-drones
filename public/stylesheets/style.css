@@ -1,8 +1,98 @@
 body {
-  padding: 50px;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1508444845599-5c89863b1c44);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.555);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  margin: 0em 2em;
+  color: rgb(114, 35, 35);
+  font-weight: bold;
+}
+nav a:hover {
+
+  color: rgb(185, 29, 29);
 }
 
 a {
   color: #00b7ff;
+}
+
+.container > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container > form * {
+  margin: .5em 0;
+}
+
+.container > form input {
+  padding: .2em 0;
+}
+
+.container > form button {
+  background-color: rgb(66, 206, 141);
+  border: unset;
+  padding: .5em 1em;
+  border-radius: 2.5em;
+  font-family: inherit;
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+
+.drone {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.877);
+  padding: .7em .5em;
+  border-radius: 2em;
+  align-items: baseline;
+  margin: 1em;
+  border: 1px solid black;
+  box-shadow: 0 0 1px black;
+}
+
+.drone form {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  align-self: center;
+}
+
+.drone button {
+  background-color: initial;
+  border: initial;
+  font-weight: bold;
+  color: #00b7ff;
+  cursor: pointer;
+}
+
+
+.drone a {
+  font-weight: bold;
+  text-decoration: none;
+  align-self: center;
 }

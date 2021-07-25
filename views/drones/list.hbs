@@ -1,1 +1,17 @@
+
 <h2>Available drones</h2>
+
+<div class="containerGrid">
+    {{#each drone}}
+    <div class="drone">
+        <h3>{{this.name}}</h3>
+        <p>Propellers: {{this.propellers}}</p>
+        <p>Max speed: {{this.maxSpeed}}</p>
+        <a href="/drones/{{this._id}}/edit">Edit Drone</a>
+        <form action="/drones/{{this._id}}/delete" method="POST">
+        <button>Delete Drone</button></form>
+        
+
+    </div>
+    {{/each}}
+</div>
